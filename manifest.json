@@ -1,0 +1,23 @@
+{
+  "name": "video-plus",
+  "display_name": "视频识别加强",
+  "version": "1.0.0",
+  "description": "视频识别加强插件：生成自适应分镜、处理字幕和音频时间轴、支持局部放大与长视频批处理；接管 MoFox 视频识别并使用 video 模型任务。",
+  "author": "Lycoris-flower",
+  "license": "AGPL-3.0",
+  "dependencies": {"plugins": [], "components": []},
+  "include": [
+    {"component_type": "service", "component_name": "video_storyboard", "enabled": true},
+    {"component_type": "event_handler", "component_name": "video_recognize", "enabled": true},
+    {"component_type": "tool", "component_name": "video_probe", "enabled": true},
+    {"component_type": "tool", "component_name": "video_storyboard", "enabled": true},
+    {"component_type": "tool", "component_name": "video_zoom", "enabled": true},
+    {"component_type": "tool", "component_name": "video_batch", "enabled": true},
+    {"component_type": "config", "component_name": "config", "enabled": true}
+  ],
+  "entry_point": "plugin.py",
+  "min_core_version": "1.3.0-alpha.2",
+  "categories": ["tool"],
+  "tags": ["video-plus", "视频识别加强", "storyboard", "ffmpeg", "vision", "asr"],
+  "api_version": {"llm_api": "1.2.0", "media_api": "1.2.0", "event_api": "1.1.0", "config_api": "1.1.0"}
+}
